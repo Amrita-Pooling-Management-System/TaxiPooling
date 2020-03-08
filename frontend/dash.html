@@ -8,6 +8,10 @@
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/mdb.min.css" type="text/css" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 </head>
 
 <body>
@@ -52,6 +56,8 @@
             </tr>
           </thead>
           <tbody>
+
+            <!-- <tag 1 begin> -->
             <tr>
               <td>1</td>
               <td>KPY</td>
@@ -59,21 +65,60 @@
               <td>5:20 pm</td>
               <td>28 March 2020</td>
                <td>Done</td> 
-              <td><a href="#" class="btn bg-warning btn-sm ">
+              <td><a href="#details" class="btn bg-warning btn-sm " data-toggle="modal">
                  check details >>> <i></i>
               </a></td>
-            </tr>
-              <tr>
+              <!-- <this is for the details part> -->
+                      <div class="modal fade show" id="details">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                               <div class="modal-header bg-success text-white">
+                                  <h3> Complete Trip details </h3>
+                                    <span class="colse" data-dismiss="modal">
+                                     <i class="fa fa-window-close"></i>
+                                    </span>
+                               </div>
+                            <div class="p-4"> <br>Trip on : <br> trip time : <br> from-> to : <br> taxi number : <br >   </div>
+                             <div class="modal-footer">
+                              
+                                <a href="" class="btn btn-success">Ok</a>
+                              </div>
+                           </div>
+                         </div>
+                       </div>
+
+                    <!-- <that ends here > -->
+                      <!-- tag1 ends-->
+           
+            <tr>
               <td>2</td>
               <td>AMP</td>
               <td>KPY</td>
               <td>5:20 pm</td>
-              <td>5 April 2020</td>
+              <td>28 March 2020</td>
                <td>Done</td> 
-              <td><a href="#" class="btn bg-warning btn-sm">
-                check details >>> <i></i>
+              <td><a href="#details" class="btn bg-warning btn-sm " data-toggle="modal">
+                 check details >>> <i></i>
               </a></td>
-            </tr>
+
+                      <div class="modal fade show" id="details">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                               <div class="modal-header bg-success text-white">
+                                  <h3> Complete Trip details </h3>
+                                    <span class="colse" data-dismiss="modal">
+                                     <i class="fa fa-window-close"></i>
+                                    </span>
+                               </div>
+                            <div class="p-4"> <br>Trip on : <br> trip time : <br> from-> to : <br> taxi number : <br >   </div>
+                             <div class="modal-footer">
+                              
+                                <a href="" class="btn btn-success">Ok</a>
+                              </div>
+                           </div>
+                         </div>
+                       </div>
+
             
           </tbody>
         </table>
@@ -90,15 +135,57 @@
               <div class="row"> &nbsp;&nbsp;<span>Phone:&nbsp;<span name="number" placeholder="number">4545218413</span></span></div>
               <div class="row"> &nbsp;&nbsp;<span>E-Mail:&nbsp;<span name="mail" placeholder="mail">praneshulleri@gmail.com</span></span></div>
             <br>
-               <a href="" class="btn btn-primary d-block font-weight-bold">
+               <a href="#loginModal" class="btn btn-primary d-block font-weight-bold" data-toggle="modal" >
           <i class="fas fa-plus"></i> &nbsp;Add Trip</a>
+
+         <div class="modal fade show" id="loginModal">
+           <div class="modal-dialog">
+            <div class="modal-content">
+              <form action="">
+                <div class="modal-header bg-success text-white">
+                  <h3>Add Journey </h3>
+                  <span class="colse" data-dismiss="modal">
+                    <i class="fa fa-window-close"></i>
+                  </span>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Source">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Destination ">
+                  </div>
+                  <div class="form-group">
+                   <span>Time:</span> <input type="time" class="form-control" placeholder="time">
+                  </div>
+                   <div class="form-group">
+                    <input type="date" class="form-control" placeholder="date">
+                  </div>
+                   <div class="form-group">
+
+                    <input type="number" class="form-control" placeholder="number of people (including yourself)" min="1" max="4">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="" class="btn " data-dismiss="modal">Close</a>
+                  <a href="" class="btn btn-success">Add Trip</a>
+                </div>
+              </form>
+              </div>
+            </div>
+          
+          </div>
+
+
+
+
               
             </div>
           </div>
       </div> 
   
   
-
+  
 </body>
 
 </html>
